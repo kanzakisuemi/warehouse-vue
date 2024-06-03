@@ -11,6 +11,7 @@
           :code="warehouse.code"
           :address="warehouse.address"
           :city="warehouse.city"
+          :cep="warehouse.cep"
           :area="warehouse.area"
         />
       </div>

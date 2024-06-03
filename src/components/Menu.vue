@@ -1,11 +1,22 @@
 <template lang="">
   <div>
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">Sobre</router-link> |
-      <router-link to="/warehouses">Galpões</router-link> |
-      <router-link to="/warehouses/new">Novo Galpão</router-link>
-    </nav>
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-toolbar>
+            <v-toolbar-title>Galpões do Pedro</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <nav>
+              <v-btn text color="grey" to="/">Home</v-btn>
+              <v-btn text color="grey" to="/about">Sobre Pedro</v-btn>
+              <v-btn text color="grey" to="/warehouses">Galpões</v-btn>
+              <v-btn text color="grey" to="/warehouses/new">Novo Galpão</v-btn>
+              
+            </nav>
+          </v-toolbar>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>

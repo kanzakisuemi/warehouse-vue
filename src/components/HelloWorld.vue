@@ -1,34 +1,56 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>{{ title }}</h2>
-  </div>
+  <v-container>
+    <v-row class="text-center">
+      <v-col cols="12">
+        <v-img
+          :src="require('../assets/racoon_icon.png')"
+          class="my-3"
+          contain
+          height="200"
+        />
+      </v-col>
+
+      <v-col class="mb-4">
+        <h1 class="display-2 font-weight-bold mb-3">
+          Galpões do Pedro
+        </h1>
+
+        <p class="subheadizng font-weight-regular">
+          Essa é a aplicação de controle de galpões do Pedro, que pega dados de outro sistema.
+          <br>O repositório da aplicação principal está disponível em:
+          <a
+            href="https://github.com/kanzakisuemi/warehouse-app"
+            target="_blank"
+          >Warehouse</a>
+        </p>
+      </v-col>
+
+      <v-col
+        class="mb-5"
+        cols="12"
+      >
+        <h2 class="headline font-weight-bold mb-3">
+          Quer ver o repositório desse projeto?
+        </h2>
+
+        <v-row justify="center">
+          <a
+            href="https://github.com/kanzakisuemi/warehouse-vue"
+            target="_blank"
+          >Pedro Galpões</a>
+        </v-row>
+      </v-col>
+
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-    title: String
-  }
-}
-</script>
+  export default {
+    name: 'HelloWorld',
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+    data: () => ({
+      
+    }),
+  }
+</script>

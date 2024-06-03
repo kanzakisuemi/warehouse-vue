@@ -1,13 +1,12 @@
 <template>
-  <div class="card">
-    <h3>{{ name }} - {{ code }}</h3>
-    <address>
-      <p>Endereço: {{ address }}</p>
-      <p>Cidade: {{ city }}</p>
-      <p>Área total: {{ area }} m2</p>
-    </address>
-      
-  </div>
+  <v-card class="card mx-auto">
+    <v-card-item>
+      <v-card-title>{{ name }} - {{ code }}</v-card-title>
+      <v-card-subtitle>{{ city }}</v-card-subtitle>
+    </v-card-item>
+    <v-card-text>Endereço: {{ address }} | {{ cep }}</v-card-text>
+    <v-card-text>Área total: {{ area }} m2</v-card-text>
+  </v-card>
 </template>
 <script>
 export default {
@@ -18,18 +17,16 @@ export default {
     code: String,
     address: String,
     city: String,
+    cep: String,
     area: Number
   }
 }
 </script>
 <style>
   .card {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 10px;
     margin-top: 10px;
     width: 40%;
-    margin-left: auto;
-    margin-right: auto;
   }
 </style>

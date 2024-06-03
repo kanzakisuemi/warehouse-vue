@@ -2,40 +2,18 @@
   <div>
     <h1>Cadastrar Galpão</h1>
     <div class="container">
-      <p>{{ msg }}</p>
-      <form v-on:submit.prevent>
-        <div class="form">
-          <label>Nome: </label>
-          <input v-model="form.name" type="text" placeholder="Nome do Galpão" />
-        </div>
-        <div class="form">
-          <label>Código: </label>
-          <input type="text" v-model="form.code" placeholder="Código do Galpão" />
-        </div>
-        <div class="form">
-          <label>Endereço: </label>
-          <input type="text" v-model="form.address" placeholder="Endereço do Galpão" />
-        </div>
-        <div class="form">
-          <label>CEP: </label>
-          <input type="text" v-model="form.cep" placeholder="CEP" />
-        </div>
-        <div class="form">
-          <label>Cidade: </label>
-          <input type="text" v-model="form.city" placeholder="Cidade" />
-        </div>
-        <div class="form">
-          <label>Área m2: </label>
-          <input type="number" v-model="form.area" />
-        </div>
-        <div class="form">
-          <label>Descrição: </label>
-          <textarea v-model="form.description" cols="30" rows="10"></textarea>
-        </div>
-        <div>
-          <button type="submit" v-on:click="createWarehouse">Cadastrar</button>
-        </div>
-      </form>
+      <v-alert v-if="msg" type="info">{{ msg }}</v-alert>
+      <v-form v-on:submit.prevent>
+        <v-text-field label="Nome" v-model="form.name"></v-text-field>
+        <v-text-field label="Código" v-model="form.code"></v-text-field>
+        <v-text-field label="Endereço" v-model="form.address"></v-text-field>
+        <v-text-field label="CEP" v-model="form.cep"></v-text-field>
+        <v-text-field label="Cidade" v-model="form.city"></v-text-field>
+        <v-text-field label="Área" v-model="form.area"></v-text-field>
+        <v-textarea label="Descrição" v-model="form.description"></v-textarea>
+        
+        <v-btn color="primay" v-on:click="createWarehouse">Cadastrar</v-btn>
+      </v-form>
     </div>
   </div>
 </template>
